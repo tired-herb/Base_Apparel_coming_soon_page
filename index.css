@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Overpass:wght@400;700&family=Ysabeau+Infant:wght@300&display=swap');
+
+
+body{
+    min-width: 99%;
+    height: 99vh;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    background-image: url(images/bg-pattern-desktop.svg);
+    min-width: 100%;
+    height: 93.3vh;
+    
+
+}
+
+section{
+    width: fit-content;
+    height:fit-content;
+    padding-left: 11rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    text-align: start;
+    
+
+}
+
+h1{
+    font-weight: 300;
+    font-size: 4rem;
+    letter-spacing: 12px;
+    color: hsl(0, 36%, 70%);
+    margin-top: 6rem;
+}
+
+h1 span {
+    font-weight: 600;
+   
+    letter-spacing: 12px;
+    color:hsl(0, 6%, 24%)
+}
+
+p{
+    color: hsl(0, 36%, 70%);
+    font-size: 16px;
+    width: 27rem;
+    line-height: 25px;
+}
+
+form{
+    display: flex;
+    border: 1px solid hsl(0, 36%, 70%);
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    width: 25rem;
+    height: 2.8rem;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 3rem
+
+}
+form:active,
+form:hover,
+form:focus
+ {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+input{
+    border-radius: 20px;
+    border:none;
+    width:90%;
+    height: 2.6rem;;
+    background-color: transparent;
+    padding-left: 2rem;
+    outline: none;    
+
+}
+input:focus{
+    border-radius: 20px;
+    border:none;
+    width:90%;
+    height: 2.6rem;
+    padding-left: 2rem;
+    outline: none;    
+    box-shadow: 0 0 0 0px rgb(82, 81, 78);
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: hsl(0, 36%, 70%);
+    background-color: transparent;
+   
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px hsl(0, 0%, 100%) inset;
+  -webkit-text-fill-color: hsl(0, 36%, 70%);
+  }
+
+button{
+   background: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+   border-radius: 20px;
+   outline:2px solid hsl(0, 75%, 80%);
+   width:7rem;
+   height: 106%;
+   border: none;
+   margin-left: 10px;
+   box-shadow: 0px 7px 15px hsl(0, 80%, 86%);
+}
+
+button:active,
+button:hover,
+button:focus
+ {
+    width: 6.7rem;
+    outline: 2px solid hsl(0, 81%, 89%);
+    background: linear-gradient(135deg, hsl(0, 79%, 91%),hsl(0, 80%, 86%));
+    transition: 0.3s;
+}
+
+.error{
+    display: none;
+    width:20px;
+    height: 20px;
+}
+
+.error-text{
+    display: none;
+    color:hsl(0, 93%, 68%);
+    font-size: 14px;
+    padding-left: 2rem;
+}
+
+.hero-desktop{
+    object-fit:cover;
+    min-height:95vh;
+    width:44%
+}
+
+.hero-mobile{
+    display:none
+}
+
+footer{
+    background-color:hsl(0, 100%, 98%);
+    position: relative;
+    width: 100%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (min-width: 1441px) {
+    .wrapper{
+        background-repeat:repeat;
+        background-size: cover;
+        
+    }
+    
+   
+    section{
+        height:20rem
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        width: 45rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    form{
+        width: 25rem
+    }
+}
+
+@media screen and (max-width: 1180px) {
+
+    .wrapper{
+        overflow-y: scroll;
+    }
+    section{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        
+        
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h1 span{
+        font-size: 3rem;
+    }
+    p{
+        width:20rem;
+        
+    }
+    form{
+        min-width: none;
+        width:20rem;
+    }
+    .hero-desktop{
+        width:auto;
+        height:max-content;
+    }
+}
+
+@media screen and (max-width: 912px){
+    .wrapper{
+        text-align: center;
+        background: linear-gradient(135deg, hsl(0, 0%, 100%),hsl(0, 100%, 98%))
+    }
+    .logo{
+        width:6rem;
+        position: absolute;
+        left:2rem
+    }
+    h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    h1 span{
+        font-size: 2rem;
+        
+    }
+    section{
+       width: 100%;
+       padding:1rem;
+       text-align: center;
+    }
+    p{
+        width: 100%;
+        font-size: 16px;
+    }
+    form{
+        width: 85%;
+        margin-top: 0rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .hero-desktop{
+        display: none;
+    }
+    .hero-mobile{
+        width: 100%;
+        display:flex;
+        margin-top:2rem;
+        margin-bottom:1rem;
+    }
+}
